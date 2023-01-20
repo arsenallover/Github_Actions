@@ -11,7 +11,7 @@ X = df.drop(columns=['species'])
 Y = df['species']
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.30)
 
-model = LogisticRegression(C=0.5)
+model = LogisticRegression(C=0.75)
 model.fit(x_train, y_train)
 print("Accuracy: ",model.score(x_test, y_test) * 100)
 
